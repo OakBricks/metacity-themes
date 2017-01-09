@@ -91,7 +91,7 @@
 </frame_geometry>
 
 <frame_geometry name="modal" title_scale="small" hide_buttons="true" parent="normal">
-	<distance name="title_vertical_pad" value="0"/>
+	<distance name="title_vertical_pad" value="9"/>
 </frame_geometry>
 
 <!-- drawing operations -->

@@ -710,7 +710,7 @@
 		x="left_width" y="top_height"
 		width="width - left_width - right_width - 1"
 		height="height - top_height - bottom_height - 1"/>
-	<rectangle color="gtk:fg[NORMAL]"
+	<rectangle color="gtk:fg[SELECTED]"
 		x="0" y="0" width="width - 1" height="height - 1"/>
 	<include name="gradient_background"
 		x="3" y="3" width="width - 7" height="height - 7"/>

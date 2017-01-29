@@ -18,8 +18,8 @@
 <constant name="C_title_focused_hilight" value="gtk:base[NORMAL]" />
 <constant name="C_title_unfocused" value="blend/gtk:text[NORMAL]/gtk:bg[NORMAL]/0.9" />
 <!-- color of the button icons -->
-<constant name="C_icons_focused" value="#ffffff" />
-<constant name="C_icons_focused_pressed" value="#ffffff" />
+<constant name="C_icons_focused" value="gtk:fg[SELECTED]" />
+<constant name="C_icons_focused_pressed" value="gtk:fg[SELECTED]" />
 <constant name="C_icons_unfocused" value="blend/gtk:text[NORMAL]/gtk:bg[NORMAL]/0.9" />
 <constant name="C_icons_unfocused_prelight" value="gtk:bg[NORMAL]" />
 <constant name="C_icons_unfocused_pressed" value="blend/#000000/gtk:bg[NORMAL]/0.7" />

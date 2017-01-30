@@ -98,17 +98,21 @@
 	<!-- Buttons -->
 
 	<draw_ops name="button_pressed_bg">
-		<gradient type="vertical" x="0" y="0" width="width" height="height" alpha="0.25">
+		<!--gradient type="vertical" x="0" y="0" width="width" height="height" alpha="0.25">
 			<color value="shade/gtk:bg[SELECTED]/0.75"/>
 			<color value="shade/gtk:bg[SELECTED]/0.5"/>
-		</gradient>
+		</gradient-->
+		<tint color="shade/gtk:bg[SELECTED]/2.0" alpha="0.2" x="0" y="0" width="width" height="height"/>
+		<line color="shade/gtk:bg[SELECTED]/1.5" x1="width" y1="height" x2="width" y2="height"/>
 	</draw_ops>
 
 	<draw_ops name="button_prelight_bg">
-		<gradient type="vertical" x="0" y="0" width="width" height="height" alpha="0.25">
+		<!--gradient type="vertical" x="0" y="0" width="width" height="height" alpha="0.25">
 			<color value="shade/gtk:bg[SELECTED]/2.0"/>
 			<color value="shade/gtk:bg[SELECTED]/1.5"/>
-		</gradient>
+		</gradient-->
+		<tint color="shade/gtk:bg[SELECTED]/2.0" alpha="0.2" x="0" y="0" width="width" height="height"/>
+		<line color="shade/gtk:bg[SELECTED]/1.5" x1="width" y1="height" x2="width" y2="height"/>
 	</draw_ops>
 
 	<draw_ops name="menu_button">

@@ -178,6 +178,12 @@
   <include name="focus_outline"/>
 </draw_ops>
 
+<draw_ops name="background_maximized">
+  <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" height="height" filled="true" />
+  <rectangle color="gtk:fg[NORMAL]" x="left_width-1" y="0" width="width+1" height="height" />
+  <include name="focus_outline"/>
+</draw_ops>
+
 <draw_ops name="title_gradient">
   <gradient type="diagonal" x="0" y="0" width="width-SpacerWidth" height="height">
     <color value="blend/gtk:bg[NORMAL]/gtk:bg[SELECTED]/0.6"/>
@@ -275,13 +281,13 @@
 </frame_style>
 
 <frame_style name="maximized_unfocused" geometry="normal_small_borders" parent="normal_unfocused">
-  <piece position="entire_background" draw_ops="background"/>
+  <piece position="entire_background" draw_ops="background_maximized"/>
   <button function="maximize" state="normal" draw_ops="restore_button"/>
   <button function="maximize" state="pressed" draw_ops="restore_button_pressed"/>
 </frame_style>
 
 <frame_style name="maximized_focused" geometry="normal_small_borders" parent="normal_focused">
-  <piece position="entire_background" draw_ops="background"/>
+  <piece position="entire_background" draw_ops="background_maximized"/>
   <button function="maximize" state="normal" draw_ops="restore_button"/>
   <button function="maximize" state="pressed" draw_ops="restore_button_pressed"/>
 </frame_style>

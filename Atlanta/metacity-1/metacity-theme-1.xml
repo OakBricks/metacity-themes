@@ -68,7 +68,9 @@
 <!-- Buttons -->
 
 <draw_ops name="button_pressed_bg">
-  <gtk_box state="active" shadow="in" x="0" y="0" width="width" height="height"/>
+  <!--gtk_box state="active" shadow="in" x="0" y="0" width="width" height="height"/-->
+  <tint color="shade/gtk:fg[NORMAL]/2.0" alpha="0.1" x="0" y="0" width="width" height="height"/>
+  <line color="shade/gtk:fg[NORMAL]/1.5" x1="width" y1="height" x2="width" y2="height"/>
 </draw_ops>
 
 <draw_ops name="menu_button">

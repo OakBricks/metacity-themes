@@ -183,6 +183,13 @@
   <include name="outer_bevel"/>
 </draw_ops>
 
+<draw_ops name="background_maximized">
+  <rectangle color="gtk:fg[NORMAL]"
+             x="0" y="0" width="width" height="height" filled="true"/>
+  <rectangle color="gtk:bg[NORMAL]"
+             x="0" y="0" width="width" height="height" filled="true"/>      
+</draw_ops>
+
 <draw_ops name="title_tile">
   <line color="gtk:bg[SELECTED]" x1="0" y1="0" x2="width" y2="0"/>
   <line color="blend/gtk:bg[SELECTED]/#000000/0.1" x1="0" y1="1" x2="width" y2="1"/>
@@ -272,13 +279,13 @@
 </frame_style>
 
 <frame_style name="maximized_unfocused" geometry="normal_small_borders" parent="normal_unfocused">
-  <piece position="entire_background" draw_ops="focus_background"/>
+  <piece position="entire_background" draw_ops="background_maximized"/>
   <button function="maximize" state="normal" draw_ops="restore_button"/>
   <button function="maximize" state="pressed" draw_ops="restore_button_pressed"/>
 </frame_style>
 
 <frame_style name="maximized_focused" geometry="normal_small_borders" parent="normal_focused">
-  <piece position="entire_background" draw_ops="focus_background"/>
+  <piece position="entire_background" draw_ops="background_maximized"/>
   <button function="maximize" state="normal" draw_ops="restore_button"/>
   <button function="maximize" state="pressed" draw_ops="restore_button_pressed"/>
 </frame_style>

@@ -184,8 +184,6 @@
 </draw_ops>
 
 <draw_ops name="background_maximized">
-  <rectangle color="gtk:fg[NORMAL]"
-             x="0" y="0" width="width" height="height" filled="true"/>
   <rectangle color="gtk:bg[NORMAL]"
              x="0" y="0" width="width" height="height" filled="true"/>      
 </draw_ops>

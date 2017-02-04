@@ -726,10 +726,12 @@
 </draw_ops>
 
 <draw_ops name="outline_focused">
-	<rectangle color="gtk:fg[NORMAL]"
-		x="left_width - 1" y="top_height"
-		width="width - left_width - right_width + 1"
-		height="height - top_height - bottom_height"/>
+	<line color="gtk:fg[NORMAL]"
+		x1="left_width - 1" y1="top_height" x2="left_width - 1" y2="height - bottom_height"/>
+	<line color="gtk:fg[NORMAL]"
+		x1="width - right_width" y1="top_height" x2="width - right_width" y2="height - bottom_height"/>
+	<line color="gtk:fg[NORMAL]"
+		x1="left_width - 1" y1="height - bottom_height" x2="width - right_width" y2="height - bottom_height"/>
 </draw_ops>
 
 <draw_ops name="background">

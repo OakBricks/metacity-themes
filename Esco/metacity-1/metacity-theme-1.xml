@@ -703,13 +703,22 @@
 	</gradient>
 </draw_ops>
 
+<!--Modifiying the gradient_background height in place doesn't seem to work very
+	well so create a copy to be used for normal windows/-->
+
+<draw_ops name="gradient_background_clipped">
+	<gradient type="vertical" x="1" y="1" width="width - 2" height="top_height - 1">
+		<color value="gtk:light[SELECTED]"/>
+		<color value="gtk:dark[SELECTED]"/>
+	</gradient>
+</draw_ops>
+
 <draw_ops name="outer_bevel_focused">
 	<rectangle color="gtk:bg[NORMAL]" filled="true"
 		x="0" y="0" width="width" height="height"/>
 	<rectangle color="gtk:fg[NORMAL]"
 		x="0" y="0" width="width - 1" height="height - 1"/>
-	<include name="gradient_background"
-		x="1" y="1" width="width - 2" height="height"/>
+	<include name="gradient_background_clipped"/>
 </draw_ops>
 
 <draw_ops name="blank">

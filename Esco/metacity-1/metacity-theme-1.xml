@@ -704,16 +704,12 @@
 </draw_ops>
 
 <draw_ops name="outer_bevel_focused">
-	<gtk_box state="selected" shadow="out" x="2" y="2" width="width - 2"
-		height="height - 2"/>
 	<rectangle color="gtk:bg[NORMAL]" filled="true"
-		x="left_width" y="top_height"
-		width="width - left_width - right_width - 1"
-		height="height - top_height - bottom_height - 1"/>
-	<rectangle color="gtk:fg[SELECTED]"
+		x="0" y="0" width="width" height="height"/>
+	<rectangle color="gtk:fg[NORMAL]"
 		x="0" y="0" width="width - 1" height="height - 1"/>
 	<include name="gradient_background"
-		x="3" y="3" width="width - 7" height="height - 7"/>
+		x="1" y="1" width="width - 2" height="height"/>
 </draw_ops>
 
 <draw_ops name="blank">

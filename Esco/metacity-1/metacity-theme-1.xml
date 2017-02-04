@@ -727,9 +727,9 @@
 
 <draw_ops name="outline_focused">
 	<rectangle color="gtk:fg[NORMAL]"
-		x="left_width - 1" y="top_height - 1"
+		x="left_width - 1" y="top_height"
 		width="width - left_width - right_width + 1"
-		height="height - top_height - bottom_height + 1"/>
+		height="height - top_height - bottom_height"/>
 </draw_ops>
 
 <draw_ops name="background">

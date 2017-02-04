@@ -732,6 +732,11 @@
 	<include name="outline_focused"/>
 </draw_ops>
 
+<draw_ops name="background_no_bevel">
+	<rectangle color="gtk:bg[NORMAL]" filled="true"
+		x="0" y="0" width="width" height="height"/>
+</draw_ops>
+
 <draw_ops name="title_background">
 	<line color="#000000" width="50"
 		x1="width - title_width - IconTitleSpacing + 25 - 1 + 3"
@@ -896,7 +901,7 @@
 
 <frame_style name="maximized_unfocused" geometry="normal_small_borders"
 	parent="normal_unfocused">
-	<piece position="entire_background" draw_ops="blank"/>
+	<piece position="entire_background" draw_ops="background_no_bevel"/>
 
 	<piece position="title" draw_ops="title_maximized"/>
 

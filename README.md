@@ -1,7 +1,9 @@
 # metacity-themes
 
 This provides the standard Metacity themes that were once shipped with
-gnome-themes-standard up until 3.16 and Metacity up until 3.20.
+gnome-themes-standard and Metacity.
 
-* Adwaita for Metacity 2 was taken from gnome-themes-standard 3.12.0.
-* All other themes (including Adwaita for Metacity 3) were taken from Metacity 3.18.4.
+Targeted window managers:
+* Marco (GTK+ 2 version)
+* Marco (GTK+ 3 version)
+* Metacity (GTK+ 3 version)

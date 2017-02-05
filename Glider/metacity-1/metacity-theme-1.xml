@@ -303,19 +303,19 @@
 <!-- ::: BUTTONS ::: -->
 
 <draw_ops name="button_bg">
-  <gtk_box state="normal" shadow="out" x="0" y="0" width="width" height="height"/>
+  <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" height="height" filled="true"/>
 </draw_ops>
 
 <draw_ops name="button_bg_unfocused">
-  <gtk_box state="insensitive" shadow="out" x="0" y="0" width="width" height="height"/>
+  <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" height="height" filled="true"/>
 </draw_ops>
 
 <draw_ops name="button_bg_prelight">
-  <gtk_box state="prelight" shadow="out" x="0" y="0" width="width" height="height"/>
+  <rectangle color="shade/gtk:bg[NORMAL]/0.85" x="0" y="0" width="width" height="height" filled="true"/>
 </draw_ops>
 
 <draw_ops name="button_bg_pressed">
-  <gtk_box state="active" shadow="in" x="0" y="0" width="width" height="height"/>
+  <rectangle color="shade/gtk:bg[NORMAL]/0.75" x="0" y="0" width="width" height="height" filled="true"/>
 </draw_ops>
 
 <draw_ops name="menu_button_icon"> 

@@ -75,7 +75,7 @@
              height="height - 1"/> 
   <rectangle color="gtk:bg[NORMAL]" filled="true"
              x="1" y="1"
-             width="width - 3"
+             width="width - 2"
              height="height - 2"/>
 </draw_ops>
 

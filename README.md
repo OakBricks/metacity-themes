@@ -1,9 +1,8 @@
 # metacity-themes
 
-This provides the standard Metacity themes that were once shipped with
-gnome-themes-standard and Metacity.
+This project provides the standard Metacity themes that were once shipped 
+with gnome-themes-standard and Metacity.
 
-Targeted window managers:
-* Marco (GTK+ 2 version)
-* Marco (GTK+ 3 version)
-* Metacity (GTK+ 3 version)
+The aim is to maintain compatibility with the GTK+ 3 versions of Metacity
+and Marco. The themes should work with other window managers that support
+the Metacity theming standard, however these are not targeted.

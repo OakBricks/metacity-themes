@@ -192,11 +192,11 @@
 </draw_ops>
 
 <draw_ops name="outer_bevel_focused">
-  <rectangle color="blend/black/gtk:bg[NORMAL]/0.8" filled="false" x="0" y="0" width="width-1" height="height-1"/>
+  <rectangle color="gtk:bg[NORMAL]" filled="true" x="0" y="0" width="width-1" height="height-1"/>
 </draw_ops>
 
 <draw_ops name="outer_bevel_unfocused">
-  <rectangle color="blend/black/gtk:bg[NORMAL]/0.8" filled="false" x="0" y="0" width="width-1" height="height-1"/>
+  <rectangle color="gtk:bg[NORMAL]" filled="true" x="0" y="0" width="width-1" height="height-1"/>
 </draw_ops>
 
 <draw_ops name="blank">

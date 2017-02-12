@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<metacity_theme>
+	<info>
+	  	<name>Watercolor</name>
+  		<author>Norman Jonas &lt;normanjonas@web.de&gt;</author>
+		<copyright>&#194; Norman Jonas, 2002-2003</copyright>
+  		<date>February 17, 2003</date>
+	  	<description>The Watercolor theme for Metacity</description>
+	</info>
+
+	<!-- This is the position ( from the right ) of the decoration -->
+	<constant name="DecorationShift" value="55"/>
+
+	<frame_geometry name="normal" rounded_top_left="true" rounded_top_right="true">
+		<distance name="left_width" value="4"/>
+		<distance name="right_width" value="4"/>
+		<distance name="bottom_height" value="4"/>
+		<distance name="left_titlebar_edge" value="4"/>
+		<distance name="right_titlebar_edge" value="4"/>
+		<aspect_ratio name="button" value="1.0"/>
+		<distance name="title_vertical_pad" value="0"/>
+		<border name="title_border" left="4" right="4" top="3" bottom="3"/>
+		<border name="button_border" left="1" right="1" top="3" bottom="3"/>
+	</frame_geometry>
+
+	<frame_geometry name="normal_maximized" parent="normal" rounded_top_left="false" rounded_top_right="false"/>
+	<frame_geometry name="utility" parent="normal" title_scale="small"/>
+	<frame_geometry name="border" parent="normal" has_title="false"/>
+	<frame_geometry	name="border_maximized"	parent="normal_maximized" has_title="false"/>
+
+	<draw_ops name="drawTitleBarActive">
+		<rectangle color="#7297ce" x="0" y="0" width="width - DecorationShift - 25" height="height" filled="true"/>
+		<rectangle color="#5274ab" x="width - DecorationShift" y="0" width="DecorationShift" height="height" filled="true"/>
+		<image filename="deco.png" x="width - DecorationShift - 25" y="0" width="object_width" height="height"/>
+	</draw_ops>
+
+	<draw_ops name="drawTitleBarInactive">
+		<rectangle color="#44618f" x="0" y="0" width="width" height="height" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawTitle">
+		<title color="black" x="(0 `max` (width-title_width)) / 2 + 1" y="1"/>
+		<title color="white" x="(0 `max` (width-title_width)) / 2" y="0"/>
+	</draw_ops>
+
+	<draw_ops name="drawTitleUtility">
+		<title color="black" x="(0 `max` (width-title_width)) / 2 + 2" y="2"/>
+		<title color="white" x="(0 `max` (width-title_width)) / 2" y="0"/>
+	</draw_ops>
+
+	<draw_ops name="drawIconMenue">
+		<icon x="0" y="0" width="width" height="height"/>
+	</draw_ops>
+
+	<draw_ops name="drawIconCloseNormal">
+		<line color="shade/#7297ce/0.7" x1="1" y1="1" x2="width - 2" y2="height - 2" width="2"/>
+		<line color="shade/#7297ce/0.7" x1="1" y1="height - 2" x2="width - 2" y2="1" width="2"/>
+	</draw_ops>
+
+	<draw_ops name="drawIconClosePrelight">
+		<line color="shade/#7297ce/0.6" x1="1" y1="1" x2="width - 2" y2="height - 2" width="2"/>
+		<line color="shade/#7297ce/0.6" x1="1" y1="height - 2" x2="width - 2" y2="1" width="2"/>
+	</draw_ops>
+
+	<draw_ops name="drawIconClosePressed">
+		<line color="shade/#7297ce/0.6" x1="1" y1="1" x2="width - 2" y2="height - 2" width="2"/>
+		<line color="shade/#7297ce/0.6" x1="1" y1="height - 2" x2="width - 2" y2="1" width="2"/>
+	</draw_ops>
+
+	<draw_ops name="drawIconMinimizeNormal">
+		<rectangle color="shade/#7297ce/0.7" x="0" y="height-2" width="width-3" height="2" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawIconMinimizePrelight">
+		<rectangle color="shade/#7297ce/0.6" x="0" y="height-2" width="width-3" height="2" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawIconMinimizePressed">
+		<rectangle color="shade/#7297ce/0.6" x="0" y="height-2" width="width-3" height="2" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawIconMaximizeNormal">
+		<rectangle color="shade/#7297ce/0.7" x="0" y="0" width="width-1" height="height-1" filled="false"/>
+		<rectangle color="shade/#7297ce/0.7" x="1" y="1" width="width-2" height="2" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawIconMaximizePrelight">
+		<rectangle color="shade/#7297ce/0.6" x="0" y="0" width="width-1" height="height-1" filled="false"/>
+		<rectangle color="shade/#7297ce/0.6" x="1" y="1" width="width-2" height="2" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawIconMaximizePressed">
+		<rectangle color="shade/#7297ce/0.6" x="0" y="0" width="width-1" height="height-1" filled="false"/>
+		<rectangle color="shade/#7297ce/0.6" x="1" y="1" width="width-2" height="2" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawIconRestoreNormal">
+		<rectangle color="shade/#7297ce/0.7" x="0" y="height-7" width="7" height="6" filled="false"/>
+		<rectangle color="shade/#7297ce/0.7" x="1" y="height-6" width="6" height="1" filled="true"/>
+		<rectangle color="shade/#7297ce/0.7" x="width-8" y="0" width="7" height="6" filled="false"/>
+		<rectangle color="shade/#7297ce/0.7" x="width-7" y="1" width="6" height="1" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawIconRestorePrelight">
+		<rectangle color="shade/#7297ce/0.6" x="0" y="height-7" width="7" height="6" filled="false"/>
+		<rectangle color="shade/#7297ce/0.6" x="1" y="height-6" width="6" height="1" filled="true"/>
+		<rectangle color="shade/#7297ce/0.6" x="width-8" y="0" width="7" height="6" filled="false"/>
+		<rectangle color="shade/#7297ce/0.6" x="width-7" y="1" width="6" height="1" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawIconRestorePressed">
+		<rectangle color="shade/#7297ce/0.6" x="0" y="height-7" width="7" height="6" filled="false"/>
+		<rectangle color="shade/#7297ce/0.6" x="1" y="height-6" width="6" height="1" filled="true"/>
+		<rectangle color="shade/#7297ce/0.6" x="width-8" y="0" width="7" height="6" filled="false"/>
+		<rectangle color="shade/#7297ce/0.6" x="width-7" y="1" width="6" height="1" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawEdgeTopActive">
+		<gradient type="horizontal" x="0" y="0" width="width" height="height">
+			<color value="#7297ce"/>
+			<color value="#5274ab"/>
+		</gradient>
+	</draw_ops>
+
+	<draw_ops name="drawEdgeTopInactive">
+		<rectangle color="#44618f" x="0" y="0" width="width" height="height" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawEdgeRightActive">
+		<rectangle color="#5274ab" x="0" y="0" width="width" height="height" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawEdgeRightInactive">
+		<rectangle color="#44618f" x="0" y="0" width="width" height="height" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawEdgeBottomActive">
+		<rectangle color="#5274ab" x="0" y="0" width="width" height="height" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawEdgeBottomInactive">
+		<rectangle color="#44618f" x="0" y="0" width="width" height="height" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawEdgeLeftActive">
+		<gradient type="vertical" x="0" y="0" width="width" height="height">
+			<color value="#7297ce"/>
+			<color value="#5274ab"/>
+		</gradient>
+	</draw_ops>
+
+	<draw_ops name="drawEdgeLeftInactive">
+		<rectangle color="#44618f" x="0" y="0" width="width" height="height" filled="true"/>
+	</draw_ops>
+
+	<draw_ops name="drawOverlay">
+		<rectangle color="#000000" x="0" y="0" width="width-1" height="height-1" filled="false"/>
+		<tint color="shade/#ffffff/0.9" alpha="0.2" x="1" y="1" width="width-2" height="1"/>
+		<tint color="shade/#ffffff/0.9" alpha="0.2" x="1" y="2" width="1" height="height-3"/>
+		<tint color="shade/#ffffff/0.1" alpha="0.2" x="1" y="height-2" width="width-2" height="1"/>
+		<tint color="shade/#ffffff/0.1" alpha="0.2" x="width-2" y="2" width="1" height="height-3"/>
+		<rectangle color="#000000" x="left_width-1" y="top_height-1" width="width-left_width-right_width+1" height="height-top_height-bottom_height+1" filled="false"/>
+	</draw_ops>
+
+	<draw_ops name="drawOverlayRounded">
+
+		<include name="drawOverlay"/>
+
+		<!-- This is taken from (c) RedHats BlueCurve (tm) theme -->
+		<line color="#000000" x1="width-5" y1="1" x2="width-4" y2="1"/>
+		<line color="#000000" x1="width-3" y1="2" x2="width-3" y2="2"/>
+		<line color="#000000" x1="width-2" y1="3" x2="width-2" y2="4"/>
+		<line color="#000000" x1="4" y1="1" x2="3" y2="1"/>
+		<line color="#000000" x1="2" y1="2" x2="2" y2="2"/>
+		<line color="#000000" x1="1" y1="3" x2="1" y2="4"/>
+	</draw_ops>
+
+	<frame_style name="normal" geometry="normal">
+
+		<piece position="overlay" draw_ops="drawOverlayRounded"/>
+
+		<piece position="titlebar" draw_ops="drawTitleBarInactive"/>
+		<piece position="title" draw_ops="drawTitle"/>
+		<piece position="right_edge" draw_ops="drawEdgeRightInactive"/>
+		<piece position="bottom_edge" draw_ops="drawEdgeBottomInactive"/>
+		<piece position="left_edge" draw_ops="drawEdgeLeftInactive"/>
+
+		<button function="menu" state="normal" draw_ops="drawIconMenue"/>
+		<button function="menu" state="prelight" draw_ops="drawIconMenue"/>
+		<button function="menu" state="pressed" draw_ops="drawIconMenue"/>
+		<button function="minimize" state="normal" draw_ops="drawIconMinimizeNormal"/>
+		<button function="minimize" state="prelight" draw_ops="drawIconMinimizePrelight"/>
+		<button function="minimize" state="pressed" draw_ops="drawIconMinimizePressed"/>
+		<button function="maximize" state="normal" draw_ops="drawIconMaximizeNormal"/>
+		<button function="maximize" state="prelight" draw_ops="drawIconMaximizePrelight"/>
+		<button function="maximize" state="pressed" draw_ops="drawIconMaximizePressed"/>
+		<button function="close" state="normal" draw_ops="drawIconCloseNormal"/>
+		<button function="close" state="prelight" draw_ops="drawIconClosePrelight"/>
+		<button function="close" state="pressed" draw_ops="drawIconClosePressed"/>
+
+	</frame_style>
+
+	<frame_style name="normal_maximized" geometry="normal_maximized" parent="normal">
+
+		<piece position="overlay" draw_ops="drawOverlay"/>
+
+		<button function="maximize" state="normal" draw_ops="drawIconRestoreNormal"/>
+		<button function="maximize" state="prelight" draw_ops="drawIconRestorePrelight"/>
+		<button function="maximize" state="pressed" draw_ops="drawIconRestorePressed"/>
+
+	</frame_style>
+
+	<frame_style name="focused" geometry="normal">
+
+		<piece position="overlay" draw_ops="drawOverlayRounded"/>
+
+		<piece position="titlebar" draw_ops="drawTitleBarActive"/>
+		<piece position="title" draw_ops="drawTitle"/>
+		<piece position="right_edge" draw_ops="drawEdgeRightActive"/>
+		<piece position="bottom_edge" draw_ops="drawEdgeBottomActive"/>
+		<piece position="left_edge" draw_ops="drawEdgeLeftActive"/>
+
+		<button function="menu" state="normal" draw_ops="drawIconMenue"/>
+		<button function="menu" state="pressed" draw_ops="drawIconMenue"/>
+		<button function="menu" state="prelight" draw_ops="drawIconMenue"/>
+		<button function="minimize" state="normal" draw_ops="drawIconMinimizeNormal"/>
+		<button function="minimize" state="prelight" draw_ops="drawIconMinimizePrelight"/>
+		<button function="minimize" state="pressed" draw_ops="drawIconMinimizePressed"/>
+		<button function="maximize" state="normal" draw_ops="drawIconMaximizeNormal"/>
+		<button function="maximize" state="prelight" draw_ops="drawIconMaximizePrelight"/>
+		<button function="maximize" state="pressed" draw_ops="drawIconMaximizePressed"/>
+		<button function="close" state="normal" draw_ops="drawIconCloseNormal"/>
+		<button function="close" state="prelight" draw_ops="drawIconClosePrelight"/>
+		<button function="close" state="pressed" draw_ops="drawIconClosePressed"/>
+
+	</frame_style>
+
+	<frame_style name="focused_maximized" geometry="normal_maximized" parent="focused">
+
+		<piece position="overlay" draw_ops="drawOverlay"/>
+
+		<button function="maximize" state="normal" draw_ops="drawIconRestoreNormal"/>
+		<button function="maximize" state="prelight" draw_ops="drawIconRestorePrelight"/>
+		<button function="maximize" state="pressed" draw_ops="drawIconRestorePressed"/>
+
+	</frame_style>
+
+	<frame_style name="border_unfocused" geometry="border" parent="normal">
+
+		<piece position="titlebar" draw_ops="drawEdgeTopInactive"/>
+
+	</frame_style>
+
+	<frame_style name="border_focused" geometry="border" parent="focused">
+
+		<piece position="titlebar" draw_ops="drawEdgeTopActive"/>
+
+	</frame_style>
+
+	<frame_style name="border_unfocused_maximized" geometry="border_maximized" parent="border_unfocused">
+
+		<piece position="overlay" draw_ops="drawOverlay"/>
+
+	</frame_style>
+
+	<frame_style name="border_focused_maximized" geometry="border_maximized" parent="border_focused">
+
+		<piece position="overlay" draw_ops="drawOverlay"/>
+
+	</frame_style>
+
+
+	<frame_style name="utility_unfocused" geometry="utility" parent="normal"/>
+	<frame_style name="utility_focused" geometry="utility" parent="focused"/>
+
+	<frame_style_set name="normal">
+		<frame focus="yes" state="normal" resize="both" style="focused"/>
+		<frame focus="yes" state="shaded" style="focused"/>
+		<frame focus="yes" state="maximized" style="focused_maximized"/>
+		<frame focus="yes" state="maximized_and_shaded" style="focused_maximized"/>
+		<frame focus="no" state="normal" resize="both" style="normal"/>
+		<frame focus="no" state="shaded" style="normal"/>
+		<frame focus="no" state="maximized" style="normal_maximized"/>
+		<frame focus="no" state="maximized_and_shaded" style="normal_maximized"/>
+	</frame_style_set>
+
+	<frame_style_set name="utility">
+		<frame focus="yes" state="normal" resize="both" style="utility_focused"/>
+		<frame focus="yes" state="shaded" style="utility_focused"/>
+		<frame focus="yes" state="maximized" style="utility_focused"/>
+		<frame focus="yes" state="maximized_and_shaded" style="utility_focused"/>
+		<frame focus="no" state="normal" resize="both" style="utility_unfocused"/>
+		<frame focus="no" state="shaded" style="utility_unfocused"/>
+		<frame focus="no" state="maximized" style="utility_unfocused"/>
+		<frame focus="no" state="maximized_and_shaded" style="utility_unfocused"/>
+	</frame_style_set>
+
+	<frame_style_set name="border">
+		<frame focus="yes" state="normal" resize="both" style="border_focused"/>
+		<frame focus="yes" state="shaded" style="border_focused"/>
+		<frame focus="yes" state="maximized" style="border_focused_maximized"/>
+		<frame focus="yes" state="maximized_and_shaded" style="border_focused_maximized"/>
+		<frame focus="no" state="normal" resize="both" style="border_unfocused"/>
+		<frame focus="no" state="shaded" style="border_unfocused"/>
+		<frame focus="no" state="maximized" style="border_unfocused_maximized"/>
+		<frame focus="no" state="maximized_and_shaded" style="border_unfocused_maximized"/>
+	</frame_style_set>
+
+	<window type="normal" style_set="normal"/>
+	<window type="dialog" style_set="normal"/>
+	<window type="modal_dialog" style_set="normal"/>
+	<window type="menu" style_set="normal"/>
+	<window type="utility" style_set="utility"/>
+	<window type="border" style_set="border"/>
+
+	<menu_icon function="close" state="normal" draw_ops="drawIconCloseNormal"/>
+	<menu_icon function="minimize" state="normal" draw_ops="drawIconMinimizeNormal"/>
+	<menu_icon function="maximize" state="normal" draw_ops="drawIconMaximizeNormal"/>
+	<menu_icon function="unmaximize" state="normal" draw_ops="drawIconRestoreNormal"/>
+
+</metacity_theme>

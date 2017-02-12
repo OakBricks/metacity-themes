@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<metacity_theme>
+<info>
+  <name>Urbicande</name>
+  <author>Olivier Samyn &lt;osamyn@ulb.ac.be&gt;</author>
+  <copyright>&#194; Oleastre, 2002</copyright>
+  <date>1 august 2002</date>
+  <description>
+    Port of my Urbicande theme for IceWM. 
+    Theme inspired by the famous series: The Dark Cities
+    Current Version: 1.1
+  </description>
+</info>
+
+<!-- define constants -->
+<constant name="IconTitleSpacing" value="5"/> <!-- Space between menu button and title -->
+<constant name="CenterTitlePieceWidth" value="48"/> <!-- Width of center title piece -->
+<constant name="ButtonWidth" value="16"/> <!-- Button width -->
+
+<frame_geometry name="normal">
+  <distance name="left_width" value="3"/>
+  <distance name="right_width" value="3"/>
+  <distance name="bottom_height" value="3"/>
+  <distance name="left_titlebar_edge" value="3"/>
+  <distance name="right_titlebar_edge" value="3"/>
+  <distance name="button_width" value="16"/>
+  <distance name="button_height" value="16"/>
+  <distance name="title_vertical_pad" value="2"/>
+  <border name="title_border" left="0" right="0" top="0" bottom="0"/>
+  <border name="button_border" left="0" right="0" top="2" bottom="0"/>
+</frame_geometry>
+
+<!-- Inactive style -->
+<frame_style name="normal" geometry="normal">
+  <piece position="left_edge">
+    <draw_ops>
+      <image filename="left-border.png" x="0" y="0" width="object_width" height="height"/>
+    </draw_ops>
+  </piece>
+
+  <piece position="right_edge">
+    <draw_ops>
+      <image filename="right-border.png" x="0" y="0" width="object_width" height="height"/>
+    </draw_ops>
+  </piece>
+
+  <piece position="title">
+    <draw_ops>
+      <title color="white" x="IconTitleSpacing" y="((height - title_height) / 2) `max` 0"/>
+    </draw_ops>
+  </piece>
+
+  <piece position="titlebar">
+    <draw_ops>
+      <rectangle color="#808080" x="0" y="0" width="width" height="height" filled="true"/>
+      <line color="black" x1="0" y1="0" x2="0" y2="height"/>
+      <line color="black" x1="0" y1="0" x2="width" y2="0"/>
+      <line color="black" x1="width-1" y1="0" x2="width-1" y2="height"/>
+      <line color="#404040" x1="1" y1="1" x2="1" y2="height"/>
+      <line color="#404040" x1="1" y1="1" x2="width-2" y2="1"/>
+      <line color="#404040" x1="width-2" y1="1" x2="width-2" y2="height"/>
+      <line color="black" x1="2" y1="(height/2)" x2="left_width + ButtonWidth + IconTitleSpacing" y2="(height/2)"/>
+      <line color="black" x1="left_width + ButtonWidth + IconTitleSpacing + title_width" y1="(height/2)" x2="width-3" y2="(height/2)"/>
+    </draw_ops>
+  </piece>
+
+  <!-- We have to draw the bottom edge in the background piece 
+       because that's the only way we can get the correct window height -->
+  <piece position="overlay">
+    <draw_ops>
+      <image filename="bottom-left-corner.png" 
+             x="0" y="height - object_height" width="object_width" height="object_height"/>
+      <image filename="bottom-mid-border.png" 
+             x="3" y="height - object_height" width="width-6" height="object_height"/>
+      <image filename="bottom-right-corner.png" 
+             x="width - object_width" y="height - object_height" width="object_height" height="object_height"/>
+    </draw_ops>
+  </piece>
+
+  <button function="close" state="normal">
+    <draw_ops>
+      <image filename="close-button.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="close" state="pressed">
+    <draw_ops>
+      <image filename="close-button-pressed.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="close" state="prelight">
+    <draw_ops>
+      <image filename="close-button-prelight.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="minimize" state="normal">
+    <draw_ops>
+      <image filename="minimize-button.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="minimize" state="pressed">
+    <draw_ops>
+      <image filename="minimize-button-pressed.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="minimize" state="prelight">
+    <draw_ops>
+      <image filename="minimize-button-prelight.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="maximize" state="normal">
+    <draw_ops>
+      <image filename="maximize-button.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="maximize" state="pressed">
+    <draw_ops>
+      <image filename="maximize-button-pressed.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="maximize" state="prelight">
+    <draw_ops>
+      <image filename="maximize-button-prelight.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="menu" state="normal">
+    <draw_ops>
+      <image filename="menu-button.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="menu" state="pressed">
+    <draw_ops>
+      <image filename="menu-button-pressed.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+  <button function="menu" state="prelight">
+    <draw_ops>
+      <image filename="menu-button-prelight.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+</frame_style>
+
+<!-- Inactive maximized style -->
+<frame_style name="normal_maximized" geometry="normal" parent="normal">
+  <button function="maximize" state="normal">
+    <draw_ops>
+      <image filename="unmaximize-button.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="maximize" state="pressed">
+    <draw_ops>
+      <image filename="unmaximize-button-pressed.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="maximize" state="prelight">
+    <draw_ops>
+      <image filename="unmaximize-button-prelight.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+</frame_style>
+
+<!-- Inactive shaded style -->
+<frame_style name="normal_shaded" geometry="normal" parent="normal">
+  <piece position="titlebar">
+    <draw_ops>
+      <rectangle color="#808080" x="0" y="0" width="width" height="height" filled="true"/>
+      <line color="black" x1="2" y1="(height/2)" x2="left_width + ButtonWidth + IconTitleSpacing" y2="(height/2)"/>
+      <line color="black" x1="left_width + ButtonWidth + IconTitleSpacing + title_width" y1="(height/2)" x2="width-3" y2="(height/2)"/>
+    </draw_ops>
+  </piece>
+  <piece position="overlay">
+    <draw_ops>
+      <rectangle color="black" x="0" y="0" width="width-1" height="(title_height+1) `max` (ButtonWidth)" filled="false"/>
+      <rectangle color="#404040" x="1" y="1" width="width-3" height="(title_height-1) `max` (ButtonWidth-2)" filled="false"/>
+    </draw_ops>
+  </piece>
+</frame_style>
+
+<!-- Inactive maximized and shaded style -->
+<frame_style name="normal_maximized_shaded" geometry="normal" parent="normal_shaded">
+  <button function="maximize" state="normal">
+    <draw_ops>
+      <image filename="unmaximize-button.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="maximize" state="pressed">
+    <draw_ops>
+      <image filename="unmaximize-button-pressed.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="maximize" state="prelight">
+    <draw_ops>
+      <image filename="unmaximize-button-prelight.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+</frame_style>
+
+<!-- Active (focused) style -->
+<frame_style name="focused" geometry="normal">
+  <piece position="left_edge">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="left-border.png" x="0" y="0" width="object_width" height="height"/>
+    </draw_ops>
+  </piece>
+
+  <piece position="right_edge">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="right-border.png" x="0" y="0" width="object_width" height="height"/>
+    </draw_ops>
+  </piece>
+
+  <piece position="title">
+    <draw_ops>
+      <title color="gtk:fg[SELECTED]" x="IconTitleSpacing" y="((height - title_height) / 2) `max` 0"/>
+    </draw_ops>
+  </piece>
+
+  <piece position="titlebar">
+    <draw_ops>
+      <rectangle color="gtk:bg[SELECTED]" x="0" y="0" width="width" height="height" filled="true"/>
+      <line color="black" x1="0" y1="0" x2="0" y2="height"/>
+      <line color="black" x1="0" y1="0" x2="width" y2="0"/>
+      <line color="black" x1="width-1" y1="0" x2="width-1" y2="height"/>
+      <line color="blend/gtk:bg[SELECTED]/black/0.5" x1="1" y1="1" x2="1" y2="height"/>
+      <line color="blend/gtk:bg[SELECTED]/black/0.5" x1="1" y1="1" x2="width-2" y2="1"/>
+      <line color="blend/gtk:bg[SELECTED]/black/0.5" x1="width-2" y1="1" x2="width-2" y2="height"/>
+      <line color="black" x1="2" y1="(height/2)" x2="left_width + ButtonWidth + IconTitleSpacing" y2="(height/2)"/>
+      <line color="black" x1="left_width + ButtonWidth + IconTitleSpacing + title_width" y1="(height/2)" x2="width-3" y2="(height/2)"/>
+    </draw_ops>
+  </piece>
+
+  <!-- We have to draw the bottom edge in the background piece 
+       because that's the only way we can get the correct window height -->
+  <piece position="overlay">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="bottom-left-corner.png" 
+             x="0" y="height - object_height" width="object_width" height="object_height"/>
+      <image colorize="gtk:bg[SELECTED]" filename="bottom-mid-border.png" 
+             x="3" y="height - object_height" width="width-6" height="object_height"/>
+      <image colorize="gtk:bg[SELECTED]" filename="bottom-right-corner.png" 
+             x="width - object_width" y="height - object_height" width="object_height" height="object_height"/>
+    </draw_ops>
+  </piece>
+
+  <button function="close" state="normal">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="close-button.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="close" state="pressed">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="close-button-pressed.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="close" state="prelight">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="close-button-prelight.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="minimize" state="normal">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="minimize-button.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="minimize" state="pressed">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="minimize-button-pressed.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="minimize" state="prelight">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="minimize-button-prelight.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="maximize" state="normal">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="maximize-button.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="maximize" state="pressed">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="maximize-button-pressed.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="maximize" state="prelight">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="maximize-button-prelight.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="menu" state="normal">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="menu-button.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="menu" state="pressed">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="menu-button-pressed.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+  <button function="menu" state="prelight">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="menu-button-prelight.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+</frame_style>
+
+<!-- Active (focused) shaded style -->
+<frame_style name="focused_shaded" geometry="normal" parent="focused">
+  <piece position="titlebar">
+    <draw_ops>
+      <rectangle color="gtk:bg[SELECTED]" x="0" y="0" width="width" height="height" filled="true"/>
+      <line color="black" x1="2" y1="(height/2)" x2="left_width + ButtonWidth + IconTitleSpacing" y2="(height/2)"/>
+      <line color="black" x1="left_width + ButtonWidth + IconTitleSpacing + title_width" y1="(height/2)" x2="width-3" y2="(height/2)"/>
+    </draw_ops>
+  </piece>
+  <piece position="overlay">
+    <draw_ops>
+      <rectangle color="black" x="0" y="0" width="width-1" height="(title_height+1) `max` (ButtonWidth)" filled="false"/>
+      <rectangle color="blend/gtk:bg[SELECTED]/black/0.5" x="1" y="1" width="width-3" height="(title_height-1) `max` (ButtonWidth-2)" filled="false"/>
+    </draw_ops>
+  </piece>
+</frame_style>
+
+<!-- Active maximized style -->
+<frame_style name="focused_maximized" geometry="normal" parent="focused">
+  <button function="maximize" state="normal">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="unmaximize-button.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="maximize" state="pressed">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="unmaximize-button-pressed.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="maximize" state="prelight">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="unmaximize-button-prelight.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+</frame_style>
+
+<!-- Active maximized and shaded style -->
+<frame_style name="focused_maximized_shaded" geometry="normal" parent="focused_shaded">
+  <button function="maximize" state="normal">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="unmaximize-button.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="maximize" state="pressed">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="unmaximize-button-pressed.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+
+  <button function="maximize" state="prelight">
+    <draw_ops>
+      <image colorize="gtk:bg[SELECTED]" filename="unmaximize-button-prelight.png" x="0" y="0" width="object_width" height="object_height"/>
+    </draw_ops>
+  </button>
+</frame_style>
+
+<frame_style_set name="normal">
+<frame focus="yes" state="shaded" style="focused_shaded"/>
+<frame focus="yes" state="normal" resize="both" style="focused"/>
+<frame focus="yes" state="maximized" style="focused_maximized"/>
+<frame focus="yes" state="maximized_and_shaded" style="focused_maximized_shaded"/>
+<frame focus="no" state="normal" resize="both" style="normal"/>
+<frame focus="no" state="shaded" style="normal_shaded"/>
+<frame focus="no" state="maximized" style="normal_maximized"/>
+<frame focus="no" state="maximized_and_shaded" style="normal_maximized_shaded"/>
+</frame_style_set>
+
+<window type="normal" style_set="normal"/>
+<window type="dialog" style_set="normal"/>
+<window type="modal_dialog" style_set="normal"/>
+<window type="menu" style_set="normal"/>
+<window type="utility" style_set="normal"/>
+<window type="border" style_set="normal"/>
+
+<menu_icon function="close" state="normal">
+  <draw_ops> 
+    <image filename="menu-close-button.png" 
+           x="(width - object_width) / 2"
+           y="(height - object_height) / 2"
+           width="object_width" height="object_height"/>
+  </draw_ops>
+</menu_icon>
+
+<menu_icon function="maximize" state="normal">
+  <draw_ops>
+    <image filename="menu-maximize-button.png" 
+           x="(width - object_width) / 2"
+           y="(height - object_height) / 2"
+           width="object_width" height="object_height"/>
+  </draw_ops>
+</menu_icon>
+
+
+<menu_icon function="minimize" state="normal">
+  <draw_ops>
+    <image filename="menu-minimize-button.png" 
+           x="(width - object_width) / 2"
+           y="(height - object_height) / 2"
+           width="object_width" height="object_height"/>
+  </draw_ops>
+</menu_icon>
+
+<menu_icon function="unmaximize" state="normal">
+  <draw_ops>
+    <image filename="menu-unmaximize-button.png" 
+           x="(width - object_width) / 2"
+           y="(height - object_height) / 2"
+           width="object_width" height="object_height"/>
+  </draw_ops>
+</menu_icon>
+
+</metacity_theme>

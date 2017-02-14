@@ -60,44 +60,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 	</draw_ops>
 	
 	<draw_ops name="close_button_icon">
-		<line color="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.75"
-			width="1"
-			x1="ButtonIPad+1" y1="ButtonIPad"
-			x2="width - ButtonIPad" y2="height - ButtonIPad - 1"/>
-		<line color="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.75"
-			width="1"
-			x1="ButtonIPad" y1="ButtonIPad"
-			x2="width - ButtonIPad" y2="height - ButtonIPad"/>
-		<line color="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.75"
-			width="1"
-			x1="ButtonIPad" y1="ButtonIPad+1"
-			x2="width - ButtonIPad - 1" y2="height - ButtonIPad"/>
-		<line color="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.75"
-			width="1"
-			x1="ButtonIPad" y1="height - ButtonIPad - 2"
-			x2="width - ButtonIPad - 1" y2="ButtonIPad-1"/>
-		<line color="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.75"
-			width="1"
-			x1="ButtonIPad" y1="height - ButtonIPad - 1"
-			x2="width - ButtonIPad" y2="ButtonIPad-1"/>
-		<line color="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.75"
-			width="1"
-			x1="ButtonIPad+1" y1="height - ButtonIPad - 1"
-			x2="width - ButtonIPad" y2="ButtonIPad"/>
+		<image filename="close_normal.png" x="0" y="0" width="object_width" height="height"/>
 	</draw_ops>
 	<draw_ops name="maximize_button_icon">
-		<rectangle color="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.75" filled="false"
-			x="ButtonIPad" y="ButtonIPad" width="width-ButtonIPad*2-1" height="height-ButtonIPad*2-1"/>
-		<line color="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.75" width="3"
-			x1="ButtonIPad" y1="ButtonIPad+1" x2="width-ButtonIPad" y2="ButtonIPad+1"/>
+		<image filename="maximize_normal.png" x="0" y="0" width="width" height="height"/>
 	</draw_ops>
 	<draw_ops name="minimize_button_icon">
-		<line color="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.75"
-			x1="ButtonIPad"
-			y1="height - ButtonIPad - ThickLineWidth + 1"
-			x2="width - ButtonIPad"
-			y2="height - ButtonIPad - ThickLineWidth + 1"
-			width="3"/>
+		<image filename="minimize_normal.png" x="0" y="0" width="width" height="height"/>
 	</draw_ops>
 	<draw_ops name="normal_window_icon">
 		<rectangle color="gtk:bg[NORMAL]" filled="true" x="0" y="0" width="width-1" height="height-1"/>
@@ -105,54 +74,31 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 		<line color="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.75" width="2" x1="0" y1="1" x2="width" y2="1"/>
 	</draw_ops>
 	<draw_ops name="restore_button_icon">
-		<include name="normal_window_icon" 
-			x="2 + ButtonIPad" y="ButtonIPad" 
-			width="width - 7 - ButtonIPad"
-			height="height - 7 - ButtonIPad"/>
-		<include name="normal_window_icon" 
-			x="ButtonIPad - 1" y="3 + ButtonIPad"
-			width="width - 7 - ButtonIPad"
-			height="height - 7 - ButtonIPad"/>
-	</draw_ops>
-	
-	<draw_ops name="toolbar_button">
-		<gtk_box state="normal" shadow="out" x="0" y="0" width="width" height="height"/>
-	</draw_ops>
-	
-	<draw_ops name="toolbar_button_pressed">
-		<gtk_box state="normal" shadow="in" x="0" y="0" width="width" height="height"/>
+		<image filename="restore_normal.png" x="0" y="0" width="width" height="height"/>
 	</draw_ops>
 	
 	<draw_ops name="close_button">
-		<include name="toolbar_button"/>
 		<include name="close_button_icon"/>
 	</draw_ops>
 	<draw_ops name="close_button_pressed">
-		<include name="toolbar_button_pressed"/>
 		<include name="close_button_icon" x="1" y="1"/>
 	</draw_ops>
 	<draw_ops name="minimize_button">
-		<include name="toolbar_button"/>
 		<include name="minimize_button_icon"/>
 	</draw_ops>
 	<draw_ops name="minimize_button_pressed">
-		<include name="toolbar_button_pressed"/>
 		<include name="minimize_button_icon" x="1" y="1"/>
 	</draw_ops>
 	<draw_ops name="maximize_button">
-		<include name="toolbar_button"/>
 		<include name="maximize_button_icon"/>
 	</draw_ops>
 	<draw_ops name="maximize_button_pressed">
-		<include name="toolbar_button_pressed"/>
 		<include name="maximize_button_icon" x="1" y="1"/>
 	</draw_ops>
 	<draw_ops name="restore_button">
-		<include name="toolbar_button"/>
 		<include name="restore_button_icon"/>
 	</draw_ops>
 	<draw_ops name="restore_button_pressed">
-		<include name="toolbar_button_pressed"/>
 		<include name="restore_button_icon" x="1" y="1"/>
 	</draw_ops>
 	<draw_ops name="menu_button">
@@ -163,17 +109,16 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 	</draw_ops>
 	
 	<draw_ops name="close_button_icon_unfocused">
-		<gtk_box state="insensitive" shadow="out" x="0" y="0" width="width" height="height"/>
 		<include name="close_button_icon"/>
 	</draw_ops>
 	<draw_ops name="maximize_button_icon_unfocused">
-		<gtk_box state="insensitive" shadow="out" x="0" y="0" width="width" height="height"/>
+		<include name="maximize_button_icon"/>
 	</draw_ops>
 	<draw_ops name="restore_button_unfocused">
-		<gtk_box state="insensitive" shadow="out" x="0" y="0" width="width" height="height"/>
+		<include name="restore_button_icon"/>
 	</draw_ops>
 	<draw_ops name="minimize_button_icon_unfocused">
-		<gtk_box state="insensitive" shadow="out" x="0" y="0" width="width" height="height"/>
+		<include name="minimize_button_icon"/>
 	</draw_ops>
 	
 	<draw_ops name="outset">
@@ -193,32 +138,20 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 	<draw_ops name="window_border">
 		<include name="outset"/>
 		<rectangle color="#000000" filled="false" x="0" y="0" width="width - 1" height="height - 1"/>
+		<rectangle color="gtk:bg[NORMAL]" filled="true" x="1" y="1" width="width - 2" height="height - 2"/>
 	</draw_ops>
 	
 	<draw_ops name="titlebar_background">
-		<gradient type="horizontal" x="0" y="0" width="width" height="height">
+		<gradient type="horizontal" x="4" y="4" width="width - 8" height="height - 6">
 			<color value="gtk:bg[SELECTED]"/>
 			<color value="blend/gtk:bg[SELECTED]/#FFFFFF/0.6"/>
 		</gradient>
 	</draw_ops>
 	<draw_ops name="titlebar_background_unfocused">
-		<gradient type="horizontal" x="0" y="0" width="width" height="height">
+		<gradient type="horizontal" x="4" y="4" width="width - 8" height="height - 6">
 			<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.5"/>
 			<color value="gtk:bg[NORMAL]"/>
 		</gradient>
-	</draw_ops>
-	<!--Add some padding on the sides of the titlebar -->
-	<draw_ops name="right_titlebar">
-		<rectangle color="blend/gtk:bg[SELECTED]/#FFFFFF/0.6" x="0" y="0" width="3" height="height" filled="true"/>
-	</draw_ops>
-	<draw_ops name="left_titlebar">
-		<rectangle color="gtk:bg[SELECTED]" x="5" y="0" width="width" height="height" filled="true"/>
-	</draw_ops>
-	<draw_ops name="right_titlebar_unfocused">
-		<rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="3" height="height" filled="true"/>
-	</draw_ops>
-	<draw_ops name="left_titlebar_unfocused">
-		<rectangle color="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.5" x="5" y="0" width="width" height="height" filled="true"/>
 	</draw_ops>
 	
 	<frame_style name="base_style" geometry="normal_geometry">
@@ -235,33 +168,27 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 	<frame_style name="focused_style" parent="base_style" geometry="normal_geometry">
 		<piece position="title" draw_ops="title_focused"/>
 		<piece position="entire_background" draw_ops="window_border"/>
-		<piece position="titlebar_middle" draw_ops="titlebar_background"/>
-		<piece position="left_titlebar_edge" draw_ops="left_titlebar"/>
-		<piece position="right_titlebar_edge" draw_ops="right_titlebar"/>
+		<piece position="titlebar" draw_ops="titlebar_background"/>
 	</frame_style>
 	
 	<frame_style name="unfocused_style" parent="base_style" geometry="normal_geometry">
 		<piece position="title" draw_ops="title_unfocused"/>
 		<piece position="entire_background" draw_ops="window_border"/>
-		<piece position="titlebar_middle" draw_ops="titlebar_background_unfocused"/>
-		<piece position="left_titlebar_edge" draw_ops="left_titlebar_unfocused"/>
-		<piece position="right_titlebar_edge" draw_ops="right_titlebar_unfocused"/>
+		<piece position="titlebar" draw_ops="titlebar_background_unfocused"/>
 	</frame_style>
 	
 	<frame_style name="maximized_focused_style" parent="base_style" geometry="normal_geometry">
 		<piece position="title" draw_ops="title_focused"/>
-		<piece position="titlebar_middle" draw_ops="titlebar_background"/>
-		<piece position="left_titlebar_edge" draw_ops="left_titlebar"/>
-		<piece position="right_titlebar_edge" draw_ops="right_titlebar"/>
+		<piece position="titlebar" draw_ops="titlebar_background"/>
+		<piece position="entire_background" draw_ops="window_border"/>
 		<button function="maximize" state="normal" draw_ops="restore_button"/>
 		<button function="maximize" state="pressed" draw_ops="restore_button_pressed"/>
 	</frame_style>
 	
 	<frame_style name="maximized_unfocused_style" parent="base_style" geometry="normal_geometry">
 		<piece position="title" draw_ops="title_unfocused"/>
-		<piece position="titlebar_middle" draw_ops="titlebar_background_unfocused"/>
-		<piece position="left_titlebar_edge" draw_ops="left_titlebar_unfocused"/>
-		<piece position="right_titlebar_edge" draw_ops="right_titlebar_unfocused"/>
+		<piece position="titlebar" draw_ops="titlebar_background_unfocused"/>
+		<piece position="entire_background" draw_ops="window_border"/>
 		<button function="maximize" state="normal" draw_ops="restore_button"/>
 		<button function="maximize" state="pressed" draw_ops="restore_button_pressed"/>
 	</frame_style>

@@ -65,19 +65,19 @@
 <!-- Buttons -->
 
 <draw_ops name="button_bg">
-  <image filename="button-bg-round.png" alpha="0.9"
+  <image filename="button-bg-round.png" alpha="1.0"
 	x="0" y="0" width="width" height="height"/>
 </draw_ops>
 
 <draw_ops name="menu_button_focused">
   <include name="button_bg"/>
-  <image filename="button-menu.png" alpha="0.9"
+  <image filename="button-menu.png" alpha="1.0"
 	x="(width-object_width)/2 + 1" y="(height-object_height)/2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="menu_button_tint">
-  <image filename="button-menu.png" alpha="0.9"
+  <image filename="button-menu.png" alpha="1.0"
 	x="(width-object_width)/2 + 1" y="(height-object_height)/2" width="object_width" height="object_height"/>
-  <tint color="#ffffff" alpha="0.5" 
+  <tint color="#ffffff" alpha="1.0" 
              x="(width - ArrowWidth) / 2"
              y="(height - ArrowHeight) / 2"
              width="ArrowWidth"
@@ -93,12 +93,12 @@
 </draw_ops>
 
 <draw_ops name="minimize_button">
-  <image filename="button-minimize.png" alpha="0.9"
+  <image filename="button-minimize.png" alpha="1.0"
 	x="(width-object_width)/2" y="(height-object_height)/2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="minimize_button_unfocused">
   <include name="button_bg"/>
-  <image filename="button-minimize.png" alpha="0.4"
+  <image filename="button-minimize.png" alpha="1.0"
 	x="(width-object_width)/2" y="(height-object_height)/2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="minimize_button_focused">
@@ -112,12 +112,12 @@
 </draw_ops>
 
 <draw_ops name="maximize_button">
-  <image filename="button-maximize.png" alpha="0.9"
+  <image filename="button-maximize.png" alpha="1.0"
 	x="(width-object_width)/2" y="(height-object_height)/2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="maximize_button_unfocused">
   <include name="button_bg"/>
-  <image filename="button-maximize.png" alpha="0.4"
+  <image filename="button-maximize.png" alpha="1.0"
 	x="(width-object_width)/2" y="(height-object_height)/2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="maximize_button_focused">
@@ -144,12 +144,12 @@
 </draw_ops>
 
 <draw_ops name="close_button">
-  <image filename="button-close.png" alpha="0.9"
+  <image filename="button-close.png" alpha="1.0"
 	x="(width-object_width)/2" y="(height-object_height)/2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="close_button_unfocused">
   <include name="button_bg"/>
-  <image filename="button-close.png" alpha="0.4"
+  <image filename="button-close.png" alpha="1.0"
 	x="(width-object_width)/2" y="(height-object_height)/2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="close_button_focused">
@@ -169,43 +169,43 @@
 
 
 <draw_ops name="title_normal_focused">
-  <image filename="caption-active-small-left.png" alpha="0.9"
+  <image filename="caption-active-small-left.png" alpha="1.0"
 	x="CaptionStart-object_width" y="0" width="object_width" height="height"/>
-  <image filename="caption-active-small-center.png" alpha="0.9"
+  <image filename="caption-active-small-center.png" alpha="1.0"
 	x="CaptionStart" y="0" width="mini_icon_width + CaptionIconPadRight + title_width" height="height"/>
-  <image filename="caption-active-small-right.png" alpha="0.9"
+  <image filename="caption-active-small-right.png" alpha="1.0"
 	x="(CaptionStart + mini_icon_width + CaptionIconPadRight + title_width) `min` (width - object_width)" y="0" width="object_width" height="height"/>
   <title color="#000011"
          x="CaptionStart + mini_icon_width + CaptionIconPadRight"
          y="((height - title_height) / 2) `max` 0"/>
-  <icon alpha="0.9" 
+  <icon alpha="1.0" 
 	x="CaptionStart" y="((height - mini_icon_height) / 2) `max` 0"
 	width="mini_icon_width" height="mini_icon_height"/>
-  <image filename="caption-active-small-right.png" alpha="0.6"
+  <image filename="caption-active-small-right.png" alpha="1.0"
 	x="(CaptionStart + mini_icon_width + CaptionIconPadRight + title_width) `min` (width - object_width)" y="0" width="object_width" height="height"/>
 </draw_ops>
 
 <draw_ops name="title_normal_unfocused">
-  <image filename="caption-inactive-left.png" alpha="0.9"
+  <image filename="caption-inactive-left.png" alpha="1.0"
 	x="CaptionStart-object_width" y="0" width="object_width" height="height"/>
-  <image filename="caption-inactive-center.png" alpha="0.9"
+  <image filename="caption-inactive-center.png" alpha="1.0"
 	x="CaptionStart" y="0" width="mini_icon_width + CaptionIconPadRight + title_width" height="height"/>
-  <icon alpha="0.6" 
+  <icon alpha="1.0" 
 	x="CaptionStart" y="((height - mini_icon_height) / 2) `max` 0"
 	width="mini_icon_width" height="mini_icon_height"/>
   <title color="#888888"
          x="CaptionStart + mini_icon_width + CaptionIconPadRight"
          y="((height - title_height) / 2) `max` 0"/>
-  <image filename="caption-inactive-right.png" alpha="0.9"
+  <image filename="caption-inactive-right.png" alpha="1.0"
 	x="(CaptionStart + mini_icon_width + CaptionIconPadRight + title_width) `min` (width - object_width)" y="0" width="object_width" height="height"/>
 </draw_ops>
 
 <draw_ops name="title_utility_focused">
-  <image filename="caption-active-small-left.png" alpha="0.9"
+  <image filename="caption-active-small-left.png" alpha="1.0"
 	x="CaptionStart-object_width" y="0" width="object_width" height="height"/>
-  <image filename="caption-active-small-center.png" alpha="0.9"
+  <image filename="caption-active-small-center.png" alpha="1.0"
 	x="CaptionStart" y="0" width="title_width" height="height"/>
-  <image filename="caption-active-small-right.png" alpha="0.9"
+  <image filename="caption-active-small-right.png" alpha="1.0"
 	x="CaptionStart + title_width" y="0" width="object_width" height="height"/>
   <title color="#000011"
          x="CaptionStart"
@@ -213,11 +213,11 @@
 </draw_ops>
 
 <draw_ops name="title_utility_unfocused">
-  <image filename="caption-inactive-left.png" alpha="0.9"
+  <image filename="caption-inactive-left.png" alpha="1.0"
 	x="CaptionStart-object_width" y="0" width="object_width" height="height"/>
-  <image filename="caption-inactive-center.png" alpha="0.9"
+  <image filename="caption-inactive-center.png" alpha="1.0"
 	x="CaptionStart" y="0" width="title_width" height="height"/>
-  <image filename="caption-inactive-right.png" alpha="0.9"
+  <image filename="caption-inactive-right.png" alpha="1.0"
 	x="CaptionStart + title_width" y="0" width="object_width" height="height"/>
   <title color="#888888"
          x="CaptionStart"
@@ -225,58 +225,58 @@
 </draw_ops>
 
 <draw_ops name="titlebar_focused">
-  <image filename="titlebar-active-center.png" alpha="0.9"
+  <image filename="titlebar-active-center.png" alpha="1.0"
 	x="TitlebarPad" y="0" width="width-(TitlebarPad*2)" height="height"/>
-  <image filename="titlebar-active-left.png" alpha="0.9"
+  <image filename="titlebar-active-left.png" alpha="1.0"
 	x="0" y="0" width="object_width" height="height"/>
-  <image filename="titlebar-active-right.png" alpha="0.9"
+  <image filename="titlebar-active-right.png" alpha="1.0"
 	x="width-object_width" y="0" width="object_width" height="height"/>
 </draw_ops>
 
 <draw_ops name="titlebar_unfocused">
-  <image filename="titlebar-inactive-center.png" alpha="0.9"
+  <image filename="titlebar-inactive-center.png" alpha="1.0"
 	x="TitlebarPad" y="0" width="width-(TitlebarPad*2)" height="height"/>
-  <image filename="titlebar-inactive-left.png" alpha="0.9"
+  <image filename="titlebar-inactive-left.png" alpha="1.0"
 	x="0" y="0" width="object_width" height="height"/>
-  <image filename="titlebar-inactive-right.png" alpha="0.9"
+  <image filename="titlebar-inactive-right.png" alpha="1.0"
 	x="width-object_width" y="0" width="object_width" height="height"/>
 </draw_ops>
 
 <draw_ops name="draw_bottom_edge_focused">
-  <image filename="grabbar-active-center.png" alpha="0.9"
+  <image filename="grabbar-active-center.png" alpha="1.0"
 	x="0" y="0" width="width" height="height"/>
-  <image filename="grabbar-active-left.png" alpha="0.9"
+  <image filename="grabbar-active-left.png" alpha="1.0"
 	x="0" y="0" width="object_width" height="height"/>
-  <image filename="grabbar-active-right.png" alpha="0.9"
+  <image filename="grabbar-active-right.png" alpha="1.0"
 	x="width-object_width" y="0" width="object_width" height="height"/>
 </draw_ops>
 
 <draw_ops name="draw_bottom_edge_unfocused">
-  <image filename="grabbar-inactive-center.png" alpha="0.9"
+  <image filename="grabbar-inactive-center.png" alpha="1.0"
 	x="0" y="0" width="width" height="height"/>
-  <image filename="grabbar-inactive-left.png" alpha="0.9"
+  <image filename="grabbar-inactive-left.png" alpha="1.0"
 	x="0" y="0" width="object_width" height="height"/>
-  <image filename="grabbar-inactive-right.png" alpha="0.9"
+  <image filename="grabbar-inactive-right.png" alpha="1.0"
 	x="width-object_width" y="0" width="object_width" height="height"/>
 </draw_ops>
 
 <draw_ops name="draw_left_edge_focused">
-  <image filename="border-active-left.png" alpha="0.9"
+  <image filename="border-active-left.png" alpha="1.0"
 	x="0" y="0" width="width" height="height"/>
 </draw_ops>
 
 <draw_ops name="draw_left_edge_unfocused">
-  <image filename="border-inactive-left.png" alpha="0.9"
+  <image filename="border-inactive-left.png" alpha="1.0"
 	x="0" y="0" width="width" height="height"/>
 </draw_ops>
 
 <draw_ops name="draw_right_edge_focused">
-  <image filename="border-active-right.png" alpha="0.9"
+  <image filename="border-active-right.png" alpha="1.0"
 	x="0" y="0" width="width" height="height"/>
 </draw_ops>
 
 <draw_ops name="draw_right_edge_unfocused">
-  <image filename="border-inactive-right.png" alpha="0.9"
+  <image filename="border-inactive-right.png" alpha="1.0"
 	x="0" y="0" width="width" height="height"/>
 </draw_ops>
 
